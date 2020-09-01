@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
 //        Toast.makeText(getApplicationContext(),ratingResults + "stars" ,Toast.LENGTH_SHORT).show();
         Intent activity2 = new Intent(this,RatingsActivity.class);
+        //Step 4 add the rating to the next activity
+        activity2.putExtra("rating",ratingResults);
         startActivity(activity2);
+        //step 6. Finish the activity afer submitting the rates.
+        finish();
     }
 }
