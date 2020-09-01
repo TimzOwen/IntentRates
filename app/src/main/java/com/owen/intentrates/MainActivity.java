@@ -2,6 +2,7 @@ package com.owen.intentrates;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RatingBar;
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         //step 2. get the rates and toast a message
         RatingBar mRating = findViewById(R.id.ratingBar);
         float ratingResults = mRating.getRating();
-        Toast.makeText(getApplicationContext(),ratingResults + "stars" ,Toast.LENGTH_SHORT).show();
+        //step 3. Comment out the toast message and add an intent
+
+//        Toast.makeText(getApplicationContext(),ratingResults + "stars" ,Toast.LENGTH_SHORT).show();
+        Intent activity2 = new Intent(this,RatingsActivity.class);
+        startActivity(activity2);
     }
 }
